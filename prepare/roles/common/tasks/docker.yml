@@ -1,0 +1,23 @@
+---
+
+- name: uninstall basic software
+  yum:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - docker-engine
+
+- name: install basic software
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - docker
+#    - docker-{{docker_version}}
+
+
+- name: prepare block device for docker
+  mount:
+    path: /opt
+    state: absent
+

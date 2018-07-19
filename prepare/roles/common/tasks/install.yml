@@ -1,0 +1,20 @@
+---
+
+- name: install basic software
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - wget 
+    - git 
+    - net-tools
+    - bind-utils 
+    - iptables-services 
+    - bridge-utils 
+    - bash-completion 
+    - kexec-tools 
+    - psacct
+    - vim 
+    - ntp
+    - centos-release-openshift-origin
+    

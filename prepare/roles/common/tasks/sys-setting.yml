@@ -1,0 +1,25 @@
+---
+
+- name: enable kdump manually parameter
+  sysctl:
+    name: kernel.sysrq
+    value: 1
+    reload: yes
+    state: present
+    
+
+#- name: enable rp_filter in vlan env
+#  sysctl:
+#    name: "{{item}}"
+#    value: 2
+#    reload: yes
+#    state: present
+#  with_items:
+#    - net.ipv4.conf.all.rp_filter 
+#    - net.ipv4.conf.default.rp_filter
+- name: set file handles to 409600,set limits.conf
+  file: src=limits.conf  dest=/etc/security/limits.conf mode=0644
+
+- name: set file handles to 409600,set pam
+  file: src=login  dest=/etc/pam.d/login  mode=0644
+  

@@ -1,0 +1,11 @@
+---
+
+- include: basic.yml
+
+#- include: set-repo.yml
+
+- include: install.yml
+
+- include: time-set.yml
+
+#- include: docker.yml

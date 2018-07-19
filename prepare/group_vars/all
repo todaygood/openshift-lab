@@ -1,0 +1,9 @@
+---
+
+docker_version: 1.12.6
+
+yum_repo_url: ftp://192.168.60.236/pub/repos/openshift/
+
+ntp_server: 192.168.122.1
+
+

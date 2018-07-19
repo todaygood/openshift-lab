@@ -1,0 +1,34 @@
+---
+
+- name: create kdump save dir
+  file: 
+    path:  /home/crash
+    state: directory
+    mode: 0777
+
+- name: set kdump.conf
+  lineinfile: 
+    path: /etc/kdump.conf
+    regexp: '^path'
+    line: 'path /home/crash'
+
+- name: enable kdump manually parameter
+  sysctl:
+    name: kernel.sysrq
+    value: 1
+    reload: yes
+    state: present
+
+# have done in kickstart post-scripts 
+#- name: set memory size reserved  and enable iommu
+#  lineinfile:
+#    path: /etc/default/grub
+#    regexp: '^GRUB_CMDLINE_LINUX='
+#    line: GRUB_CMDLINE_LINUX="crashkernel=1G intel_iommu=on"
+#
+#- name: generate new boot grub.cfg
+#  command: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
+- name: restart kdump service
+  service: name=kdump  state=restarted
