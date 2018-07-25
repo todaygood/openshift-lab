@@ -1,6 +1,6 @@
 ---
 - name: configure selinux 
-  selinux: policy=targeted state=permissive
+  selinux: policy=targeted state=enforcing
 
 #- name: config sshd config file
 #  lineinfile: dest=/etc/ssh/sshd_config insertafter=UseDNS  line="UseDNS no" state=present
