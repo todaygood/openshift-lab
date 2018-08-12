@@ -16,5 +16,8 @@
     - psacct
     - vim 
     - ntp
+    - NetworkManager
     - centos-release-openshift-origin
-    
+
+- name: start NetworkManager service 
+  service: name=NetworkManager enabled=yes state=started
