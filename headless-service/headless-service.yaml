@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1 
+metadata:
+  name: nginx-service
+spec:
+  selector: 
+    app: nginx_test
+  ports:
+    - protocol: TCP
+      port: 80 
+      targetPort: 80 
+  clusterIP: None
+
+
+
