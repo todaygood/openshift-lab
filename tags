@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+INSTALLHOST	examples/atomic-registry/Makefile	/^INSTALLHOST=127.0.0.1$/;"	m
+TEST_IMAGE	examples/atomic-registry/Makefile	/^TEST_IMAGE=atomic-registry-install$/;"	m
+addkey	examples/gitserver/hooks/post-receive	/^function addkey {$/;"	f
+copy_files_to_host	examples/atomic-registry/systemd/install.sh	/^function copy_files_to_host() {$/;"	f
+customize_config	examples/atomic-registry/systemd/install.sh	/^function customize_config() {$/;"	f
+detect	examples/gitserver/hooks/post-receive	/^function detect {$/;"	f
+has	examples/gitserver/hooks/detect-language	/^function has {$/;"	f
+hasglob	examples/gitserver/hooks/detect-language	/^function hasglob {$/;"	f
+key	examples/gitserver/hooks/detect-language	/^function key {$/;"	f
+key	examples/gitserver/hooks/post-receive	/^function key {$/;"	f
+print_next_steps	examples/atomic-registry/systemd/install.sh	/^function print_next_steps() {$/;"	f
+test_cannot_push	examples/atomic-registry/test.sh	/^function test_cannot_push() {$/;"	f
+test_push	examples/atomic-registry/test.sh	/^function test_push() {$/;"	f
+usage	examples/grafana/setup-grafana.sh	/^usage() {$/;"	f
+wait_for_url	examples/atomic-registry/allinone/run.sh	/^function wait_for_url {$/;"	f
+write_config	examples/atomic-registry/systemd/install.sh	/^function write_config() {$/;"	f
