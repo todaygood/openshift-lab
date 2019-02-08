@@ -1,0 +1,43 @@
+
+
+ [WARNING]: Consider using get_url or uri module rather than running curl
+
+fatal: [ose0.cloud.genomics.cn]: FAILED! => {"attempts": 120, "changed": false, "cmd": ["curl", "--silent", "--tlsv1.2", 
+"--cacert", "/etc/origin/master/ca-bundle.crt", "https://openshift-internal.cloud.genomics.cn:8443/healthz/ready"], "delta": "0:00:00.012319", "end": "2018-07-24 17:50:35.016430", "msg": "non-zero return code", "rc": 6, "start": "2018-07-24 17:50:35.004111", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+NO MORE HOSTS LEFT ******************************************************************************************************
+        to retry, use: --limit @/usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.retry
+
+PLAY RECAP **************************************************************************************************************
+localhost                  : ok=12   changed=0    unreachable=0    failed=0   
+ose0.cloud.genomics.cn     : ok=253  changed=82   unreachable=0    failed=1   
+ose1.cloud.genomics.cn     : ok=182  changed=68   unreachable=0    failed=0   
+ose2.cloud.genomics.cn     : ok=182  changed=68   unreachable=0    failed=0   
+ose3.cloud.genomics.cn     : ok=26   changed=1    unreachable=0    failed=0   
+ose4.cloud.genomics.cn     : ok=26   changed=1    unreachable=0    failed=0   
+ose5.cloud.genomics.cn     : ok=34   changed=10   unreachable=0    failed=0   
+ose6.cloud.genomics.cn     : ok=26   changed=1    unreachable=0    failed=0   
+ose7.cloud.genomics.cn     : ok=26   changed=1    unreachable=0    failed=0   
+
+
+INSTALLER STATUS ********************************************************************************************************
+Initialization             : Complete (0:00:55)
+Health Check               : Complete (0:01:36)
+etcd Install               : Complete (0:01:33)
+Load balancer Install      : Complete (0:00:27)
+Master Install             : In Progress (0:09:07)
+        This phase can be restarted by running: playbooks/openshift-master/config.yml
+
+
+
+Failure summary:
+
+
+  1. Hosts:    ose0.cloud.genomics.cn
+     Play:     Configure masters
+     Task:     Wait for API to become available
+     Message:  non-zero return code
+[root@ose0 playbooks]# 
+
+
+
+curl --tlsv1.2 --cacert /etc/origin/master/ca-bundle.crt   https://openshift-internal.cloud.genomics.cn:8443/healthz/ready
